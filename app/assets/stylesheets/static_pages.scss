@@ -1,3 +1,88 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+* {
+	box-sizing: border-box;
+}
+
+a {
+	color: inherit;
+}
+
+ul, li {
+	margin: 0;
+}
+
+#header {
+	color: red;
+	font-size: 2rem;
+}
+
+////
+
+@mixin clearfix {
+	&:after {
+		content: " "; /* Older browser do not support empty content */
+		visibility: hidden;
+		display: block;
+		height: 0;
+		clear: both;
+	}
+}
+
+.row {
+	@include clearfix;
+}
+
+#banner {
+	background-color: #00c;
+	color: #fff;
+}
+
+#breadcrumb {
+	float: left;
+}
+
+#banner_controls {
+	float: right;
+}
+
+#posts {
+	width: 80%;
+	float: left;
+
+	table {
+		width: 100%;
+		border-collapse: collapse;
+	}
+
+	th {
+		text-align: left;
+	}
+
+	tr:nth-child(odd) {
+		background: #eee;
+	}
+}
+
+#sidebar {
+	width: 20%;
+	float: right;
+	padding-left: 1rem;
+
+	.box {
+		background: #eee;
+		margin-bottom: 1rem;
+		padding: 0.5rem;
+		border: solid 1px #000;
+	}
+
+	.box_title {
+		font-weight: bold;
+		text-align: center;
+	}
+
+	.box_content {
+	}
+}
